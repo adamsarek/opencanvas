@@ -1,17 +1,17 @@
 {
-	"name": "open-canvas",
+	"name": "opencanvas",
 	"version": "0.0.1",
 	"description": "",
 	"keywords": ["open canvas", "open", "canvas", "open source"],
-	"homepage": "https://github.com/adamsarek/open-canvas#readme",
+	"homepage": "https://github.com/adamsarek/opencanvas#readme",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/adamsarek/open-canvas.git"
+		"url": "https://github.com/adamsarek/opencanvas.git"
 	},
 	"bugs": {
-		"url": "https://github.com/adamsarek/open-canvas/issues"
+		"url": "https://github.com/adamsarek/opencanvas/issues"
 	},
-	"main": "dist/open-canvas.js",
+	"main": "dist/opencanvas.js",
 	"scripts": {
 		"build": "esbuild src/**/*.ts --bundle --minify --sourcemap --outdir=dist",
 		"watch": "esbuild src/**/*.ts --bundle --minify --sourcemap --outdir=dist --watch"

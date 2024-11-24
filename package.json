@@ -20,8 +20,8 @@
 		"README.md"
 	],
 	"scripts": {
-		"build": "esbuild ./src/**/* --bundle --format=esm --minify --sourcemap --outdir=dist",
-		"watch": "esbuild ./src/**/* --bundle --format=esm --minify --sourcemap --outdir=dist --watch"
+		"build": "esbuild src/**/* --bundle --format=esm --minify --sourcemap --outdir=dist",
+		"watch": "esbuild src/**/* --bundle --format=esm --minify --sourcemap --outdir=dist --watch"
 	},
 	"dependencies": {},
 	"devDependencies": {

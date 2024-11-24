@@ -1,0 +1,33 @@
+.opencanvas {
+	font: 16px monospace;
+}
+
+.opencanvas-container {
+	position: relative;
+	width: fit-content;
+}
+
+.opencanvas-frame {
+	
+}
+
+.opencanvas-canvas {
+	background: #000;
+	vertical-align: middle;
+}
+
+.opencanvas-overlay {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+.opencanvas-overlay:after {
+	content: "Loading...";
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	color: #FFF;
+	transform: translate(-50%, -50%);
+}

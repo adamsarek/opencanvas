@@ -1,9 +1,30 @@
 <!doctype html>
 <html>
 	<head>
-		<script src="../dist/open-canvas.js"></script>
+		<link rel="stylesheet" href="../dist/assets/css/opencanvas.css">
+		<script type="module">
+			import OpenCanvas from '../dist/opencanvas.js';
+			
+			const openCanvas = new OpenCanvas({
+				selector: null,
+			});
+		</script>
 	</head>
 	<body>
-		<canvas class="open-canvas"></canvas>
+		<noscript>JavaScript is required to use this site. <a href="https://www.enable-javascript.com/" target="_blank">Learn how to enable it here.</a></noscript>
+		<canvas class="opencanvas"></canvas>
+		<canvas class="opencanvas"></canvas>
+		<style>
+			body {
+				background: #333;
+				margin: 0;
+				display: grid;
+				grid-gap: 16px;
+				align-content: space-between;
+			}
+			canvas {
+				background: #030;
+			}
+		</style>
 	</body>
 </html>

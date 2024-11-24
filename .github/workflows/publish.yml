@@ -18,12 +18,12 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: 22
+          node-version: 20
           registry-url: https://registry.npmjs.org/
 
       # Install dependencies and build the package
       - name: Install dependencies
-        run: npm install
+        run: npm ci
 
       - name: Build the package
         run: npm run build

@@ -14,7 +14,8 @@
 	"main": "dist/opencanvas.js",
 	"scripts": {
 		"build": "esbuild src/**/* --bundle --format=esm --minify --sourcemap --outdir=dist",
-		"watch": "esbuild src/**/* --bundle --format=esm --minify --sourcemap --outdir=dist --watch"
+		"watch": "esbuild src/**/* --bundle --format=esm --minify --sourcemap --outdir=dist --watch",
+		"copy": "cp -r src/assets dist/assets"
 	},
 	"author": "Adam Šárek",
 	"license": "SEE LICENSE IN LICENSE",

@@ -1,0 +1,67 @@
+{
+	"compilerOptions": {
+		"lib": [
+			"deno.ns",
+			"dom",
+			"dom.asynciterable",
+			"dom.iterable"
+		],
+		"verbatimModuleSyntax": true,
+		"strict": true,
+		"allowUnreachableCode": false,
+		"allowUnusedLabels": false,
+		"exactOptionalPropertyTypes": true,
+		"noFallthroughCasesInSwitch": true,
+		"noImplicitAny": true,
+		"noImplicitOverride": true,
+		"noImplicitReturns": true,
+		"noImplicitThis": true,
+		"noPropertyAccessFromIndexSignature": true,
+		"noUncheckedIndexedAccess": true,
+		"noUnusedLocals": true,
+		"noUnusedParameters": true
+	},
+	"tasks": {
+		"start": "deno run --check=all --watch-hmr mod.ts",
+		"build": "esbuild src/**/* --bundle --format=esm --minify --sourcemap --outdir=dist",
+		"fmt": "deno fmt --watch",
+		"lint": "deno lint --watch",
+		"watch": "esbuild src/**/*.ts --bundle --format=esm --minify --sourcemap --outdir=dist --watch"
+	},
+	"fmt": {
+		"indentWidth": 4,
+		"lineWidth": 80,
+		"semiColons": true,
+		"singleQuote": true,
+		"useTabs": true,
+		"include": [
+			"src",
+			"tests"
+		],
+		"exclude": [
+			"node_modules",
+			"dist"
+		]
+	},
+	"lint": {
+		"include": [
+			"src",
+			"tests"
+		],
+		"exclude": [
+			"node_modules",
+			"dist"
+		],
+		"rules": {
+			"tags": ["recommended"]
+		}
+	},
+	"test": {
+		"exclude": [
+			"node_modules",
+			"dist"
+		]
+	},
+	"lock": "./deno.lock",
+	"imports": {}
+}

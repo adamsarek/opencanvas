@@ -7,9 +7,7 @@
 	width: fit-content;
 }
 
-.opencanvas-frame {
-	
-}
+.opencanvas-frame {}
 
 .opencanvas-canvas {
 	background: #000;
@@ -24,10 +22,10 @@
 	right: 0;
 }
 .opencanvas-overlay:after {
-	content: "Loading...";
+	content: 'Loading...';
 	position: absolute;
 	top: 50%;
 	left: 50%;
-	color: #FFF;
+	color: #fff;
 	transform: translate(-50%, -50%);
 }

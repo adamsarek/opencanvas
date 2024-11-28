@@ -1,0 +1,11 @@
+# Sample files
+sample/
+
+# Node.js
+node_modules/
+
+# Build tools and configs
+tsconfig.json
+.npmignore
+.gitignore
+package-lock.json

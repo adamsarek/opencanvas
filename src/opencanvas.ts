@@ -1,7 +1,7 @@
 export class Type {
 	private static _instance: Type;
 
-	private constructor() {}
+	private constructor() { }
 
 	public static get instance(): Type {
 		if (!Type._instance) {
@@ -10,25 +10,24 @@ export class Type {
 
 		return Type._instance;
 	}
-
-	public static isString(value: unknown): boolean {
+	
+	public static isString(value: any): boolean {
 		return typeof value === 'string';
 	}
 
-	public static isArray(value: unknown): boolean {
+	public static isArray(value: any): boolean {
 		return Array.isArray(value);
 	}
 
-	public static isStringArray(values: unknown): boolean {
-		return Array.isArray(values) &&
-			values.every((value: unknown) => this.isString(value));
+	public static isStringArray(values: any): boolean {
+		return this.isArray(values) && values.every((value: any) => this.isString(value));
 	}
 }
 
 export class OpenCanvasCache {
 	private static _instance: OpenCanvasCache;
 
-	private constructor() {}
+	private constructor() { }
 
 	public static get instance(): OpenCanvasCache {
 		if (!OpenCanvasCache._instance) {
@@ -69,12 +68,12 @@ export class OpenCanvasCache {
 }
 
 export interface OpenCanvasOptions {
-	selector: string | Array<string>;
+	selector: string | Array<string>,
 }
 
 export default class OpenCanvas {
 	private options: OpenCanvasOptions;
-
+	
 	public constructor(options: OpenCanvasOptions) {
 		this.options = options;
 
@@ -86,12 +85,14 @@ export default class OpenCanvas {
 	}
 
 	private getSelector(): string {
-		const selector: string | Array<string> = this.options?.selector;
+		let selector: string | Array<string> = this.options?.selector;
 
 		if (Type.isStringArray(selector) && selector?.length > 0) {
 			return `.${(selector as Array<string>).join(' .')}`;
+
 		} else if (Type.isString(selector) && selector?.length > 0) {
 			return (selector as string);
+
 		} else {
 			return '.opencanvas';
 		}
@@ -113,7 +114,7 @@ export default class OpenCanvas {
 			if (parentElement && createElement) {
 				parentElement?.insertBefore(createElement, selectedElement);
 			}
-
+			
 			selectedElement.remove();
 		}
 	}

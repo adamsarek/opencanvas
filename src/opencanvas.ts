@@ -11,16 +11,16 @@ export class Type {
 		return Type._instance;
 	}
 	
-	public static isString(value: any): boolean {
+	public static isString(value: unknown): boolean {
 		return typeof value === 'string';
 	}
 
-	public static isArray(value: any): boolean {
-		return Array.isArray(value);
+	public static isArray(values: unknown): boolean {
+		return Array.isArray(values);
 	}
 
-	public static isStringArray(values: any): boolean {
-		return this.isArray(values) && values.every((value: any) => this.isString(value));
+	public static isStringArray(values: unknown): boolean {
+		return Array.isArray(values) && values.every((value: unknown) => this.isString(value));
 	}
 }
 
@@ -68,7 +68,7 @@ export class OpenCanvasCache {
 }
 
 export interface OpenCanvasOptions {
-	selector: string | Array<string>,
+	selector: string | Array<string>;
 }
 
 export default class OpenCanvas {
@@ -85,7 +85,7 @@ export default class OpenCanvas {
 	}
 
 	private getSelector(): string {
-		let selector: string | Array<string> = this.options?.selector;
+		const selector: string | Array<string> = this.options?.selector;
 
 		if (Type.isStringArray(selector) && selector?.length > 0) {
 			return `.${(selector as Array<string>).join(' .')}`;

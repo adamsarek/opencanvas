@@ -1,10 +1,10 @@
 {
 	"name": "@adamsarek/opencanvas",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"description": "",
 	"keywords": ["opencanvas", "open-canvas", "open canvas", "open", "canvas", "open source", "typescript", "javascript"],
 	"author": "Adam Šárek",
-	"license": "SEE LICENSE IN LICENSE",
+	"license": "GPL-3.0",
 	"homepage": "https://github.com/adamsarek/opencanvas#readme",
 	"repository": {
 		"type": "git",
@@ -20,8 +20,8 @@
 		"README.md"
 	],
 	"scripts": {
-		"build": "esbuild src/**/*.ts --bundle --format=esm --minify --sourcemap --outdir=dist",
-		"watch": "esbuild src/**/*.ts --bundle --format=esm --minify --sourcemap --outdir=dist --watch"
+		"build": "npm install && esbuild src/**/* --bundle --format=esm --minify --sourcemap --outdir=dist",
+		"watch": "npm install && esbuild src/**/* --bundle --format=esm --minify --sourcemap --outdir=dist --watch"
 	},
 	"dependencies": {},
 	"devDependencies": {

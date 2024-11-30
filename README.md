@@ -1,4 +1,6 @@
 # OpenCanvas
+Reusable performance focused canvas built in TypeScript and on top of the latest web tech.
+
 ## Browser Support [^1][^2]
 <table>
 	<thead>
@@ -16,93 +18,93 @@
 			<th align="left">IE</th>
 			<th align="left">Chrome</th>
 			<th align="left">Firefox</th>
-			<th align="left">Samsung Internet</th>
+			<th align="left">Samsung<br>Internet</th>
 		</tr>
 	</thead>
 	<tbody>
 		<tr>
 			<td><a href="https://caniuse.com/canvas">Canvas</a></td>
-			<td>✔️&nbsp;4+</td>
-			<td>✔️&nbsp;12+</td>
-			<td>✔️&nbsp;4+</td>
-			<td>✔️&nbsp;3.6+</td>
-			<td>✔️&nbsp;10+</td>
-			<td>✔️&nbsp;9+</td>
-			<td>✔️&nbsp;TODO</td>
-			<td>✔️&nbsp;3.2+</td>
-			<td>✔️&nbsp;4+</td>
+			<td>✔️4+</td>
+			<td>✔️12+</td>
+			<td>✔️4+</td>
+			<td>✔️3.6+</td>
+			<td>✔️10+</td>
+			<td>✔️9+</td>
+			<td>✔️</td>
+			<td>✔️3.2+</td>
+			<td>✔️4+</td>
 		</tr>
 		<tr>
 			<td><a href="https://caniuse.com/offscreencanvas">OffscreenCanvas</a></td>
-			<td>✔️&nbsp;69+</td>
-			<td>✔️&nbsp;79+</td>
-			<td>✔️&nbsp;17+</td>
-			<td>✔️&nbsp;105+</td>
-			<td>✔️&nbsp;64+</td>
+			<td>✔️69+</td>
+			<td>✔️79+</td>
+			<td>✔️17+</td>
+			<td>✔️105+</td>
+			<td>✔️64+</td>
 			<td>❌</td>
-			<td>✔️&nbsp;TODO</td>
-			<td>✔️&nbsp;17+</td>
-			<td>✔️&nbsp;10.1+</td>
+			<td>✔️</td>
+			<td>✔️17+</td>
+			<td>✔️10.1+</td>
 		</tr>
 		<tr>
 			<td><a href="https://caniuse.com/mdn-api_canvasrenderingcontext2d">Canvas2D API</a></td>
-			<td>✔️&nbsp;4+</td>
-			<td>✔️&nbsp;12+</td>
-			<td>✔️&nbsp;3.1+</td>
-			<td>✔️&nbsp;2+</td>
-			<td>✔️&nbsp;10+</td>
-			<td>✔️&nbsp;9+</td>
-			<td>✔️&nbsp;TODO</td>
-			<td>✔️&nbsp;3.2+</td>
-			<td>✔️&nbsp;4+</td>
+			<td>✔️4+</td>
+			<td>✔️12+</td>
+			<td>✔️3.1+</td>
+			<td>✔️2+</td>
+			<td>✔️10+</td>
+			<td>✔️9+</td>
+			<td>✔️</td>
+			<td>✔️3.2+</td>
+			<td>✔️4+</td>
 		</tr>
 		<tr>
 			<td><a href="https://caniuse.com/webgl">WebGL</a></td>
-			<td>✔️&nbsp;8+</td>
-			<td>✔️&nbsp;12+</td>
-			<td>✔️&nbsp;5.1+</td>
-			<td>✔️&nbsp;4+</td>
-			<td>✔️&nbsp;12.1+</td>
-			<td>✔️&nbsp;11+</td>
-			<td>✔️&nbsp;TODO</td>
-			<td>✔️&nbsp;8+</td>
-			<td>✔️&nbsp;4+</td>
+			<td>✔️8+</td>
+			<td>✔️12+</td>
+			<td>✔️5.1+</td>
+			<td>✔️4+</td>
+			<td>✔️12.1+</td>
+			<td>✔️11+</td>
+			<td>✔️</td>
+			<td>✔️8+</td>
+			<td>✔️4+</td>
 		</tr>
 		<tr>
 			<td><a href="https://caniuse.com/webgl2">WebGL 2.0</a></td>
-			<td>✔️&nbsp;56+</td>
-			<td>✔️&nbsp;79+</td>
-			<td>✔️&nbsp;15+</td>
-			<td>✔️&nbsp;51+</td>
-			<td>✔️&nbsp;43+</td>
+			<td>✔️56+</td>
+			<td>✔️79+</td>
+			<td>✔️15+</td>
+			<td>✔️51+</td>
+			<td>✔️43+</td>
 			<td>❌</td>
-			<td>✔️&nbsp;TODO</td>
-			<td>✔️&nbsp;15+</td>
-			<td>✔️&nbsp;7.2+</td>
+			<td>✔️</td>
+			<td>✔️15+</td>
+			<td>✔️7.2+</td>
 		</tr>
 		<tr>
 			<td><a href="https://caniuse.com/webgpu">WebGPU</a></td>
-			<td>✔️&nbsp;113+</td>
-			<td>✔️&nbsp;113+</td>
-			<td>✔️&nbsp;TP+</td>
-			<td>🧪&nbsp;63+</td>
-			<td>✔️&nbsp;99+</td>
+			<td>✔️113+</td>
+			<td>✔️113+</td>
+			<td>✔️TP+</td>
+			<td>🧪63+</td>
+			<td>✔️99+</td>
 			<td>❌</td>
-			<td>✔️&nbsp;TODO</td>
-			<td>🧪&nbsp;17.4+</td>
-			<td>✔️&nbsp;24+</td>
+			<td>✔️</td>
+			<td>🧪17.4+</td>
+			<td>✔️24+</td>
 		</tr>
 		<tr>
 			<td><a href="https://caniuse.com/webworkers">Web Workers</a></td>
-			<td>✔️&nbsp;4+</td>
-			<td>✔️&nbsp;12+</td>
-			<td>✔️&nbsp;4+</td>
-			<td>✔️&nbsp;3.5+</td>
-			<td>✔️&nbsp;11.5+</td>
-			<td>✔️&nbsp;10+</td>
-			<td>✔️&nbsp;TODO</td>
-			<td>✔️&nbsp;5+</td>
-			<td>✔️&nbsp;4+</td>
+			<td>✔️4+</td>
+			<td>✔️12+</td>
+			<td>✔️4+</td>
+			<td>✔️3.5+</td>
+			<td>✔️11.5+</td>
+			<td>✔️10+</td>
+			<td>✔️</td>
+			<td>✔️5+</td>
+			<td>✔️4+</td>
 		</tr>
 	</tbody>
 	<tfoot>
@@ -111,37 +113,37 @@
 		</tr>
 		<tr>
 			<td><b>Minimum</b></td>
-			<td>✔️&nbsp;4+</td>
-			<td>✔️&nbsp;12+</td>
-			<td>✔️&nbsp;4+</td>
-			<td>✔️&nbsp;3.6+</td>
-			<td>✔️&nbsp;10+</td>
-			<td>✔️&nbsp;9+</td>
-			<td>✔️&nbsp;TODO</td>
-			<td>✔️&nbsp;3.2+</td>
-			<td>✔️&nbsp;4+</td>
+			<td>✔️4+</td>
+			<td>✔️12+</td>
+			<td>✔️4+</td>
+			<td>✔️3.6+</td>
+			<td>✔️10+</td>
+			<td>✔️9+</td>
+			<td>✔️</td>
+			<td>✔️3.2+</td>
+			<td>✔️4+</td>
 		</tr>
 		<tr>
 			<td><b>Full</b></td>
-			<td>✔️&nbsp;113+</td>
-			<td>✔️&nbsp;113+</td>
-			<td>✔️&nbsp;TP+</td>
-			<td>✔️&nbsp;105+</td>
-			<td>✔️&nbsp;99+</td>
+			<td>✔️113+</td>
+			<td>✔️113+</td>
+			<td>✔️TP+</td>
+			<td>✔️105+</td>
+			<td>✔️99+</td>
 			<td>❌</td>
-			<td>✔️&nbsp;TODO</td>
-			<td>🧪&nbsp;17.4+</td>
-			<td>✔️&nbsp;24+</td>
+			<td>✔️</td>
+			<td>🧪17.4+</td>
+			<td>✔️24+</td>
 		</tr>
 	</tfoot>
 </table>
 <small>
-✔️ Supported
-❌ Not Supported
-🧪 Experimental Support (<i>requires additional configuration</i>)
+✔️Supported
+❌Not Supported
+🧪Experimental Support (<i>requires additional configuration</i>)
 </small><br>
 
-[^1]: Browser support contains data provided by [Can I use](caniuse.com) based on used technologies.
+[^1]: Browser support contains data provided by [Can I use](https://caniuse.com/) based on used technologies.
 [^2]: Minimum support is met when browser supports Canvas and Canvas2D API.
 
 ## Installation
@@ -222,4 +224,3 @@ const openCanvas = new OpenCanvas(options);
 		</tr>
 	</tbody>
 </table>
-

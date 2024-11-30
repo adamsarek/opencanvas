@@ -1,3 +1,8 @@
+/* Themes */
+@import url(css/theme-default.css);
+@import url(css/theme-light.css);
+
+/* Main */
 .opencanvas {
 	font: 16px monospace;
 }
@@ -12,7 +17,6 @@
 }
 
 .opencanvas-canvas {
-	background: #000;
 	vertical-align: middle;
 }
 
@@ -22,12 +26,13 @@
 	bottom: 0;
 	left: 0;
 	right: 0;
+	color: var(--overlay-color);
+	background: var(--overlay-background-color);
 }
 .opencanvas-overlay:after {
 	content: 'Loading...';
 	position: absolute;
 	top: 50%;
 	left: 50%;
-	color: #FFF;
 	transform: translate(-50%, -50%);
 }

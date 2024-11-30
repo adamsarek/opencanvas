@@ -1,39 +1,11 @@
-interface IGlobalOptions {
-	// e.g. '.opencanvas' | ['opencanvas']
-	get selector(): string;
-	set selector(selector: string | string[]);
-}
-
-class GlobalOptions implements IGlobalOptions {
-	#selector: string | string[] | null = null;
-	
-	public constructor(options: IGlobalOptions) {
-		this.selector = options?.selector;
-	}
-
-	get selector(): string {
-		const selector = this.#selector;
-
-		if (Array.isArray(selector) && selector.every((value: string) => typeof value === 'string') && selector?.length > 0) {
-			return `.${(selector as string[]).join(' .')}`;
-
-		} else if (typeof selector === 'string' && selector?.length > 0) {
-			return (selector as string);
-
-		} else {
-			return '.opencanvas';
-		}
-	}
-	set selector(selector: string | string[]) {
-		this.#selector = selector;
-	}
-}
+import IOptions from "./classes/IOptions";
+import Options from "./classes/Options";
 
 export default class OpenCanvas {
-	private options: GlobalOptions;
+	private options: Options;
 	
-	public constructor(options: IGlobalOptions) {
-		this.options = new GlobalOptions(options);
+	public constructor(options: IOptions) {
+		this.options = new Options(options);
 
 		this.create();
 	}

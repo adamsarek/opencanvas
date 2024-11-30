@@ -1,7 +1,7 @@
 {
 	"name": "@adamsarek/opencanvas",
-	"version": "0.0.3",
-	"description": "",
+	"version": "0.0.4",
+	"description": "Reusable performance focused canvas built in TypeScript and on top of the latest web tech.",
 	"keywords": [
 		"opencanvas",
 		"open-source",

@@ -1,44 +1,60 @@
-export class Type {
-	private static _instance: Type;
+interface IGlobalOptions {
+	// e.g. '.opencanvas' | ['opencanvas']
+	get selector(): string;
+	set selector(selector: string | string[]);
+}
 
-	private constructor() { }
-
-	public static get instance(): Type {
-		if (!Type._instance) {
-			Type._instance = new Type();
-		}
-
-		return Type._instance;
-	}
+class GlobalOptions implements IGlobalOptions {
+	#selector: string | string[] | null = null;
 	
-	public static isString(value: unknown): boolean {
-		return typeof value === 'string';
+	public constructor(options: IGlobalOptions) {
+		this.selector = options?.selector;
 	}
 
-	public static isArray(values: unknown): boolean {
-		return Array.isArray(values);
-	}
+	get selector(): string {
+		const selector = this.#selector;
 
-	public static isStringArray(values: unknown): boolean {
-		return Array.isArray(values) && values.every((value: unknown) => this.isString(value));
+		if (Array.isArray(selector) && selector.every((value: string) => typeof value === 'string') && selector?.length > 0) {
+			return `.${(selector as string[]).join(' .')}`;
+
+		} else if (typeof selector === 'string' && selector?.length > 0) {
+			return (selector as string);
+
+		} else {
+			return '.opencanvas';
+		}
+	}
+	set selector(selector: string | string[]) {
+		this.#selector = selector;
 	}
 }
 
-export class OpenCanvasCache {
-	private static _instance: OpenCanvasCache;
+export default class OpenCanvas {
+	private options: GlobalOptions;
+	
+	public constructor(options: IGlobalOptions) {
+		this.options = new GlobalOptions(options);
 
-	private constructor() { }
-
-	public static get instance(): OpenCanvasCache {
-		if (!OpenCanvasCache._instance) {
-			OpenCanvasCache._instance = new OpenCanvasCache();
-		}
-
-		return OpenCanvasCache._instance;
+		this.create();
 	}
 
-	public static get createdElement(): Element {
+	public create(): void {
+		this.replaceElements();
+	}
+
+	private selectElements(): Element[] {
+		const selector: string = this.options.selector;
+		const elements: NodeListOf<Element> = document.querySelectorAll(selector);
+
+		// Do not select inner elements that match the same selector
+		return Array.from(elements).filter(el => {
+			return !el.closest(`${selector} ${selector}`);
+		});
+	}
+
+	private createElement(className: string | null): Element {
 		const containerElement: Element = document.createElement('div');
+		containerElement.className = className || ''; // Apply original selected element's classList
 		containerElement.classList.add(...[
 			'opencanvas',
 			'opencanvas-container',
@@ -65,56 +81,20 @@ export class OpenCanvasCache {
 
 		return containerElement;
 	}
-}
-
-export interface OpenCanvasOptions {
-	selector: string | Array<string>;
-}
-
-export default class OpenCanvas {
-	private options: OpenCanvasOptions;
-	
-	public constructor(options: OpenCanvasOptions) {
-		this.options = options;
-
-		this.create();
-	}
-
-	public create(): void {
-		this.replaceElements();
-	}
-
-	private getSelector(): string {
-		const selector: string | Array<string> = this.options?.selector;
-
-		if (Type.isStringArray(selector) && selector?.length > 0) {
-			return `.${(selector as Array<string>).join(' .')}`;
-
-		} else if (Type.isString(selector) && selector?.length > 0) {
-			return (selector as string);
-
-		} else {
-			return '.opencanvas';
-		}
-	}
-
-	private selectElements(): NodeListOf<Element> {
-		const selector: string = this.getSelector();
-
-		return document.querySelectorAll(selector);
-	}
 
 	private replaceElements(): void {
-		const selectedElements: NodeListOf<Element> = this.selectElements();
+		const selectedElements: Element[] = this.selectElements();
 
 		for (const selectedElement of selectedElements) {
 			const parentElement: ParentNode | null = selectedElement.parentNode;
-			const createElement: Element = OpenCanvasCache.createdElement;
+			const createdElement: Element = this.createElement(selectedElement.className);
 
-			if (parentElement && createElement) {
-				parentElement?.insertBefore(createElement, selectedElement);
+			// Insert new created element
+			if (parentElement && createdElement) {
+				parentElement?.insertBefore(createdElement, selectedElement);
 			}
 			
+			// Remove original selected element
 			selectedElement.remove();
 		}
 	}

@@ -1,8 +1,19 @@
 {
 	"name": "@adamsarek/opencanvas",
-	"version": "0.0.2",
+	"version": "0.0.3",
 	"description": "",
-	"keywords": ["opencanvas", "open-canvas", "open canvas", "open", "canvas", "open source", "typescript", "javascript"],
+	"keywords": [
+		"opencanvas",
+		"open-source",
+		"canvas",
+		"offscreencanvas",
+		"canvas2d",
+		"webgl",
+		"webgl2",
+		"webgpu",
+		"webworker",
+		"typescript"
+	],
 	"author": "Adam Šárek",
 	"license": "GPL-3.0",
 	"homepage": "https://github.com/adamsarek/opencanvas#readme",

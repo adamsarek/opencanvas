@@ -24,87 +24,87 @@ Reusable performance focused canvas built in TypeScript and on top of the latest
 	<tbody>
 		<tr>
 			<td><a href="https://caniuse.com/canvas">Canvas</a></td>
-			<td>✔️4+</td>
-			<td>✔️12+</td>
-			<td>✔️4+</td>
-			<td>✔️3.6+</td>
-			<td>✔️10+</td>
-			<td>✔️9+</td>
+			<td>4</td>
+			<td>12</td>
+			<td>4</td>
+			<td>3.6</td>
+			<td>10</td>
+			<td>9</td>
 			<td>✔️</td>
-			<td>✔️3.2+</td>
-			<td>✔️4+</td>
+			<td>3.2</td>
+			<td>4</td>
 		</tr>
 		<tr>
 			<td><a href="https://caniuse.com/offscreencanvas">OffscreenCanvas</a></td>
-			<td>✔️69+</td>
-			<td>✔️79+</td>
-			<td>✔️17+</td>
-			<td>✔️105+</td>
-			<td>✔️64+</td>
+			<td>69</td>
+			<td>79</td>
+			<td>17</td>
+			<td>105</td>
+			<td>64</td>
 			<td>❌</td>
 			<td>✔️</td>
-			<td>✔️17+</td>
-			<td>✔️10.1+</td>
+			<td>17</td>
+			<td>10.1</td>
 		</tr>
 		<tr>
 			<td><a href="https://caniuse.com/mdn-api_canvasrenderingcontext2d">Canvas2D API</a></td>
-			<td>✔️4+</td>
-			<td>✔️12+</td>
-			<td>✔️3.1+</td>
-			<td>✔️2+</td>
-			<td>✔️10+</td>
-			<td>✔️9+</td>
+			<td>4</td>
+			<td>12</td>
+			<td>3.1</td>
+			<td>2</td>
+			<td>10</td>
+			<td>9</td>
 			<td>✔️</td>
-			<td>✔️3.2+</td>
-			<td>✔️4+</td>
+			<td>3.2</td>
+			<td>4</td>
 		</tr>
 		<tr>
 			<td><a href="https://caniuse.com/webgl">WebGL</a></td>
-			<td>✔️8+</td>
-			<td>✔️12+</td>
-			<td>✔️5.1+</td>
-			<td>✔️4+</td>
-			<td>✔️12.1+</td>
-			<td>✔️11+</td>
+			<td>8</td>
+			<td>12</td>
+			<td>5.1</td>
+			<td>4</td>
+			<td>12.1</td>
+			<td>11</td>
 			<td>✔️</td>
-			<td>✔️8+</td>
-			<td>✔️4+</td>
+			<td>8</td>
+			<td>4</td>
 		</tr>
 		<tr>
 			<td><a href="https://caniuse.com/webgl2">WebGL 2.0</a></td>
-			<td>✔️56+</td>
-			<td>✔️79+</td>
-			<td>✔️15+</td>
-			<td>✔️51+</td>
-			<td>✔️43+</td>
+			<td>56</td>
+			<td>79</td>
+			<td>15</td>
+			<td>51</td>
+			<td>43</td>
 			<td>❌</td>
 			<td>✔️</td>
-			<td>✔️15+</td>
-			<td>✔️7.2+</td>
+			<td>15</td>
+			<td>7.2</td>
 		</tr>
 		<tr>
 			<td><a href="https://caniuse.com/webgpu">WebGPU</a></td>
-			<td>✔️113+</td>
-			<td>✔️113+</td>
-			<td>✔️TP+</td>
-			<td>🧪63+</td>
-			<td>✔️99+</td>
+			<td>113</td>
+			<td>113</td>
+			<td>TP</td>
+			<td>🧪&nbsp;63</td>
+			<td>99</td>
 			<td>❌</td>
 			<td>✔️</td>
-			<td>🧪17.4+</td>
-			<td>✔️24+</td>
+			<td>🧪&nbsp;17.4</td>
+			<td>24</td>
 		</tr>
 		<tr>
 			<td><a href="https://caniuse.com/webworkers">Web Workers</a></td>
-			<td>✔️4+</td>
-			<td>✔️12+</td>
-			<td>✔️4+</td>
-			<td>✔️3.5+</td>
-			<td>✔️11.5+</td>
-			<td>✔️10+</td>
+			<td>4</td>
+			<td>12</td>
+			<td>4</td>
+			<td>3.5</td>
+			<td>11.5</td>
+			<td>10</td>
 			<td>✔️</td>
-			<td>✔️5+</td>
-			<td>✔️4+</td>
+			<td>5</td>
+			<td>4</td>
 		</tr>
 	</tbody>
 	<tfoot>
@@ -113,34 +113,33 @@ Reusable performance focused canvas built in TypeScript and on top of the latest
 		</tr>
 		<tr>
 			<td><b>Minimum</b></td>
-			<td>✔️4+</td>
-			<td>✔️12+</td>
-			<td>✔️4+</td>
-			<td>✔️3.6+</td>
-			<td>✔️10+</td>
-			<td>✔️9+</td>
+			<td>4</td>
+			<td>12</td>
+			<td>4</td>
+			<td>3.6</td>
+			<td>10</td>
+			<td>9</td>
 			<td>✔️</td>
-			<td>✔️3.2+</td>
-			<td>✔️4+</td>
+			<td>3.2</td>
+			<td>4</td>
 		</tr>
 		<tr>
 			<td><b>Full</b></td>
-			<td>✔️113+</td>
-			<td>✔️113+</td>
-			<td>✔️TP+</td>
-			<td>✔️105+</td>
-			<td>✔️99+</td>
+			<td>113</td>
+			<td>113</td>
+			<td>TP</td>
+			<td>105</td>
+			<td>99</td>
 			<td>❌</td>
 			<td>✔️</td>
-			<td>🧪17.4+</td>
-			<td>✔️24+</td>
+			<td>🧪17.4</td>
+			<td>24</td>
 		</tr>
 	</tfoot>
 </table>
 <small>
-✔️Supported
-❌Not Supported
-🧪Experimental Support (<i>requires additional configuration</i>)
+ℹ️&nbsp;The numbers above represent the minimum browser versions supporting the specified feature.<br>
+✔️&nbsp;Supported&nbsp;&nbsp;&nbsp;&nbsp;❌&nbsp;Not Supported&nbsp;&nbsp;&nbsp;&nbsp;🧪&nbsp;Experimental Support (<i>requires additional configuration</i>)
 </small><br>
 
 [^1]: Browser support contains data provided by [Can I use](https://caniuse.com/) based on used technologies.

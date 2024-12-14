@@ -1,7 +1,7 @@
 # OpenCanvas
 Reusable performance focused canvas built in TypeScript and on top of the latest web tech.
 
-## Browser Support [^1][^2]
+## Browser Support
 <table>
 	<thead>
 		<tr>
@@ -10,101 +10,101 @@ Reusable performance focused canvas built in TypeScript and on top of the latest
 			<th colspan="3">Phone</th>
 		</tr>
 		<tr>
-			<th align="left">Chrome</th>
-			<th align="left">Edge</th>
-			<th align="left">Safari</th>
-			<th align="left">Firefox</th>
-			<th align="left">Opera</th>
-			<th align="left">IE</th>
-			<th align="left">Chrome</th>
-			<th align="left">Firefox</th>
-			<th align="left">Samsung<br>Internet</th>
+			<th><img width="24" height="24" alt="Google Chrome" title="Google Chrome" src="https://upload.wikimedia.org/wikipedia/commons/e/e1/Google_Chrome_icon_%28February_2022%29.svg"></th>
+			<th><img width="24" height="24" alt="Microsoft Edge" title="Microsoft Edge" src="https://upload.wikimedia.org/wikipedia/commons/9/98/Microsoft_Edge_logo_%282019%29.svg"></th>
+			<th><img width="24" height="24" alt="Safari" title="Safari" src="https://upload.wikimedia.org/wikipedia/commons/8/8d/Safari_2020_logo.svg"></th>
+			<th><img width="24" height="24" alt="Firefox" title="Firefox" src="https://upload.wikimedia.org/wikipedia/commons/a/a0/Firefox_logo%2C_2019.svg"></th>
+			<th><img width="24" height="24" alt="Opera" title="Opera" src="https://upload.wikimedia.org/wikipedia/commons/4/49/Opera_2015_icon.svg"></th>
+			<th><img width="24" height="24" alt="Internet Explorer" title="Internet Explorer" src="https://upload.wikimedia.org/wikipedia/commons/1/18/Internet_Explorer_10%2B11_logo.svg"></th>
+			<th><img width="24" height="24" alt="Google Chrome" title="Google Chrome" src="https://upload.wikimedia.org/wikipedia/commons/e/e1/Google_Chrome_icon_%28February_2022%29.svg"></th>
+			<th><img width="24" height="24" alt="Firefox" title="Firefox" src="https://upload.wikimedia.org/wikipedia/commons/a/a0/Firefox_logo%2C_2019.svg"></th>
+			<th><img width="24" height="24" alt="Samsung Internet" title="Samsung Internet" src="https://upload.wikimedia.org/wikipedia/commons/e/e9/Samsung_Internet_logo.svg"></th>
 		</tr>
 	</thead>
 	<tbody>
 		<tr>
 			<td><a href="https://caniuse.com/canvas">Canvas</a></td>
-			<td>4</td>
-			<td>12</td>
-			<td>4</td>
-			<td>3.6</td>
-			<td>10</td>
-			<td>9</td>
-			<td>✔️</td>
-			<td>3.2</td>
-			<td>4</td>
-		</tr>
-		<tr>
-			<td><a href="https://caniuse.com/offscreencanvas">OffscreenCanvas</a></td>
-			<td>69</td>
-			<td>79</td>
-			<td>17</td>
-			<td>105</td>
-			<td>64</td>
-			<td>❌</td>
-			<td>✔️</td>
-			<td>17</td>
-			<td>10.1</td>
+			<td align="center">4</td>
+			<td align="center">12</td>
+			<td align="center">3.1</td>
+			<td align="center">2</td>
+			<td align="center">10</td>
+			<td align="center">9</td>
+			<td align="center">✔️</td>
+			<td align="center">3.2</td>
+			<td align="center">4</td>
 		</tr>
 		<tr>
 			<td><a href="https://caniuse.com/mdn-api_canvasrenderingcontext2d">Canvas2D API</a></td>
-			<td>4</td>
-			<td>12</td>
-			<td>3.1</td>
-			<td>2</td>
-			<td>10</td>
-			<td>9</td>
-			<td>✔️</td>
-			<td>3.2</td>
-			<td>4</td>
-		</tr>
-		<tr>
-			<td><a href="https://caniuse.com/webgl">WebGL</a></td>
-			<td>8</td>
-			<td>12</td>
-			<td>5.1</td>
-			<td>4</td>
-			<td>12.1</td>
-			<td>11</td>
-			<td>✔️</td>
-			<td>8</td>
-			<td>4</td>
-		</tr>
-		<tr>
-			<td><a href="https://caniuse.com/webgl2">WebGL 2.0</a></td>
-			<td>56</td>
-			<td>79</td>
-			<td>15</td>
-			<td>51</td>
-			<td>43</td>
-			<td>❌</td>
-			<td>✔️</td>
-			<td>15</td>
-			<td>7.2</td>
-		</tr>
-		<tr>
-			<td><a href="https://caniuse.com/webgpu">WebGPU</a></td>
-			<td>113</td>
-			<td>113</td>
-			<td>TP</td>
-			<td>🧪&nbsp;63</td>
-			<td>99</td>
-			<td>❌</td>
-			<td>✔️</td>
-			<td>🧪&nbsp;17.4</td>
-			<td>24</td>
+			<td align="center">4</td>
+			<td align="center">12</td>
+			<td align="center">3.1</td>
+			<td align="center">2</td>
+			<td align="center">10</td>
+			<td align="center">9</td>
+			<td align="center">✔️</td>
+			<td align="center">3.2</td>
+			<td align="center">4</td>
 		</tr>
 		<tr>
 			<td><a href="https://caniuse.com/webworkers">Web Workers</a></td>
-			<td>4</td>
-			<td>12</td>
-			<td>4</td>
-			<td>3.5</td>
-			<td>11.5</td>
-			<td>10</td>
-			<td>✔️</td>
-			<td>5</td>
-			<td>4</td>
+			<td align="center">4</td>
+			<td align="center">12</td>
+			<td align="center">4</td>
+			<td align="center">3.5</td>
+			<td align="center">11.5</td>
+			<td align="center">10</td>
+			<td align="center">✔️</td>
+			<td align="center">5</td>
+			<td align="center">4</td>
+		</tr>
+		<tr>
+			<td><a href="https://caniuse.com/webgl">WebGL</a></td>
+			<td align="center">8</td>
+			<td align="center">12</td>
+			<td align="center">5.1</td>
+			<td align="center">4</td>
+			<td align="center">12.1</td>
+			<td align="center">11</td>
+			<td align="center">✔️</td>
+			<td align="center">8</td>
+			<td align="center">4</td>
+		</tr>
+		<tr>
+			<td><a href="https://caniuse.com/webgl2">WebGL 2.0</a></td>
+			<td align="center">56</td>
+			<td align="center">79</td>
+			<td align="center">15</td>
+			<td align="center">51</td>
+			<td align="center">43</td>
+			<td align="center">❌</td>
+			<td align="center">✔️</td>
+			<td align="center">15</td>
+			<td align="center">7.2</td>
+		</tr>
+		<tr>
+			<td><a href="https://caniuse.com/offscreencanvas">OffscreenCanvas</a></td>
+			<td align="center">69</td>
+			<td align="center">79</td>
+			<td align="center">17</td>
+			<td align="center">105</td>
+			<td align="center">64</td>
+			<td align="center">❌</td>
+			<td align="center">✔️</td>
+			<td align="center">17</td>
+			<td align="center">10.1</td>
+		</tr>
+		<tr>
+			<td><a href="https://caniuse.com/webgpu">WebGPU</a></td>
+			<td align="center">113</td>
+			<td align="center">113</td>
+			<td align="center">TP</td>
+			<td align="center">63&nbsp;🧪</td>
+			<td align="center">99</td>
+			<td align="center">❌</td>
+			<td align="center">✔️</td>
+			<td align="center">17.4&nbsp;🧪</td>
+			<td align="center">24</td>
 		</tr>
 	</tbody>
 	<tfoot>
@@ -113,37 +113,34 @@ Reusable performance focused canvas built in TypeScript and on top of the latest
 		</tr>
 		<tr>
 			<td><b>Minimum</b></td>
-			<td>4</td>
-			<td>12</td>
-			<td>4</td>
-			<td>3.6</td>
-			<td>10</td>
-			<td>9</td>
-			<td>✔️</td>
-			<td>3.2</td>
-			<td>4</td>
+			<td align="center">4</td>
+			<td align="center">12</td>
+			<td align="center">4</td>
+			<td align="center">3.5</td>
+			<td align="center">11.5</td>
+			<td align="center">10</td>
+			<td align="center">✔️</td>
+			<td align="center">5</td>
+			<td align="center">4</td>
 		</tr>
 		<tr>
 			<td><b>Full</b></td>
-			<td>113</td>
-			<td>113</td>
-			<td>TP</td>
-			<td>105</td>
-			<td>99</td>
-			<td>❌</td>
-			<td>✔️</td>
-			<td>🧪17.4</td>
-			<td>24</td>
+			<td align="center">113</td>
+			<td align="center">113</td>
+			<td align="center">TP</td>
+			<td align="center">105</td>
+			<td align="center">99</td>
+			<td align="center">❌</td>
+			<td align="center">✔️</td>
+			<td align="center">17.4&nbsp;🧪</td>
+			<td align="center">24</td>
 		</tr>
 	</tfoot>
 </table>
-<small>
+ℹ️&nbsp;Contains data provided by <a href="https://caniuse.com">Can I use</a> based on used technologies.<br>
 ℹ️&nbsp;The numbers above represent the minimum browser versions supporting the specified feature.<br>
+ℹ️&nbsp;Overall minimum support is met when the browser supports Canvas, Canvas2D API and Web Workers.<br>
 ✔️&nbsp;Supported&nbsp;&nbsp;&nbsp;&nbsp;❌&nbsp;Not Supported&nbsp;&nbsp;&nbsp;&nbsp;🧪&nbsp;Experimental Support (<i>requires additional configuration</i>)
-</small><br>
-
-[^1]: Browser support contains data provided by [Can I use](https://caniuse.com/) based on used technologies.
-[^2]: Minimum support is met when browser supports Canvas and Canvas2D API.
 
 ## Installation
 ### npm
@@ -153,7 +150,7 @@ npm install @adamsarek/opencanvas --save
 
 ### CDN
 ```
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@adamsarek/opencanvas@latest/dist/opencanvas.css">
+<link href="https://cdn.jsdelivr.net/npm/@adamsarek/opencanvas@latest/dist/opencanvas.css" rel="stylesheet">
 <script src="https://cdn.jsdelivr.net/npm/@adamsarek/opencanvas@latest/dist/opencanvas.js"></script>
 ```
 
@@ -190,6 +187,13 @@ const openCanvas = new OpenCanvas(options);
 			<td valign="top">CSS&nbsp;selector<br>classList</td>
 			<td valign="top"><code>'.opencanvas'</code></td>
 			<td valign="top">Select target element.</td>
+		</tr>
+		<tr>
+			<td valign="top"><code>theme</code></td>
+			<td valign="top"><code>string</code></td>
+			<td valign="top"><code>'default'</code> | <code>'light'</code></td>
+			<td valign="top"><code>'default'</code></td>
+			<td valign="top">Choose a theme.</td>
 		</tr>
 	</tbody>
 </table>

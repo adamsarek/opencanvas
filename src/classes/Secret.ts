@@ -32,19 +32,19 @@ const Secret = (() => {
 
 			if (value && typeof value === 'object') {
 				wm[key] = new Proxy(value, {
-					get: (t, k) => {
-						return t[k];
+					get: (prop: object, propKey: keyof object) => {
+						return prop[propKey];
 					},
-					set: (t, k, v) => {
+					set: (prop: object, propKey: keyof object, propValue: unknown) => {
 						// If class has setter for specified key, use it
-						if (Object.getOwnPropertyDescriptor(self[key], key)?.set) {
-							self[key] = Object.assign(
-								t.toObject(),
-								{ [k]: v }
+						if (Object.getOwnPropertyDescriptor(Object.getPrototypeOf(self), key)?.set) {
+							self[key as keyof object] = Object.assign(
+								structuredClone(prop),
+								{ [propKey]: propValue }
 							);
 
 						} else {
-							t[k] = v;
+							prop[propKey as keyof object] = propValue;
 						}
 						return true;
 					}

@@ -1,6 +1,6 @@
 {
 	"name": "@adamsarek/opencanvas",
-	"version": "0.0.6",
+	"version": "0.0.7",
 	"description": "Reusable performance focused canvas built in TypeScript and on top of the latest web tech.",
 	"keywords": [
 		"opencanvas",
@@ -19,7 +19,7 @@
 	"homepage": "https://github.com/adamsarek/opencanvas#readme",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/adamsarek/opencanvas.git"
+		"url": "git+https://github.com/adamsarek/opencanvas.git"
 	},
 	"bugs": {
 		"url": "https://github.com/adamsarek/opencanvas/issues"
@@ -31,8 +31,8 @@
 		"README.md"
 	],
 	"scripts": {
-		"build": "npm install && esbuild src/**/* --bundle --format=esm --minify --sourcemap --outdir=dist --log-level=debug",
-		"watch": "npm install && esbuild src/**/* --bundle --format=esm --minify --sourcemap --outdir=dist --log-level=debug --watch"
+		"build": "npm install && esbuild \"src/**/*\" --bundle --format=esm --minify --sourcemap --outdir=dist --log-level=debug",
+		"watch": "npm install && esbuild \"src/**/*\" --bundle --format=esm --minify --sourcemap --outdir=dist --log-level=debug --watch"
 	},
 	"dependencies": {},
 	"devDependencies": {

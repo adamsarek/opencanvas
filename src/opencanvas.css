@@ -9,14 +9,20 @@
 
 .opencanvas-container {
 	position: relative;
-	width: fit-content;
+	display: grid;
+	/*width: fit-content;
+	height: fit-content;*/
+	overflow: hidden;
 }
 
 .opencanvas-frame {
-	
+	display: grid;
 }
 
 .opencanvas-canvas {
+	background: #000;
+	width: 100%;
+	height: 100%;
 	vertical-align: middle;
 }
 

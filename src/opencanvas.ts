@@ -18,6 +18,18 @@ const OpenCanvas = (() => {
 				// #TODO
 			};
 
+			Secret.set(this, 'resizeObserver', new ResizeObserver((entries) => {
+				for (const entry of entries) {
+					const containerElement = entry.target;
+					const canvasElement = containerElement.querySelector('.opencanvas-canvas');
+					
+					canvasElement.width = containerElement.offsetWidth;
+					canvasElement.height = containerElement.offsetHeight;
+					
+					this.drawCanvas(canvasElement);
+				}
+			}), false);
+
 			const states = Secret.set(this, 'states', new States());
 
 			this.options = options;
@@ -132,29 +144,55 @@ const OpenCanvas = (() => {
 			if (parentElement && containerElement) {
 				parentElement?.insertBefore(containerElement, selectedElement);
 			}
-			
+
 			// Remove original selected element
 			selectedElement.remove();
 
-			const layout = new Layout();
-			layout.container = containerElement;
-			layout.frame = frameElement;
-			layout.canvas = canvasElement;
-			layout.overlay = overlayElement;
-
-			return layout;
+			return new Layout(containerElement, frameElement, canvasElement, overlayElement);
 		}
 
 		private createLayouts(): void {
 			const layouts = Secret.set(this, 'layouts', []);
-
+			const resizeObserver = Secret.get(this, 'resizeObserver');
 			const selectedElements: Element[] = this.selectElements();
 
 			for (const selectedElement of selectedElements) {
-				layouts.push(this.createLayout(selectedElement));
+				const layout = this.createLayout(selectedElement);
+				
+				resizeObserver.unobserve(layout.container);
+				resizeObserver.observe(layout.container);
+				
+				layouts.push(layout);
 			}
 
 			this.updateTheme();
+		}
+
+		private clearContext(context: CanvasRenderingContext2D): void {
+			context.clearRect(0, 0, context.canvas.width, context.canvas.height);
+		}
+
+		private drawContext(context: CanvasRenderingContext2D): void {
+			this.clearContext(context);
+			
+			const centerX = context.canvas.width / 2;
+			const centerY = context.canvas.height / 2;
+			const radius = 50;
+
+			context.beginPath();
+			context.arc(centerX, centerY, radius, 0, Math.PI * 2);
+			context.fillStyle = '#0FA';
+			context.fill();
+			context.strokeStyle = '#888';
+			context.stroke();
+
+			console.log('DRAW');
+		}
+
+		private drawCanvas(canvasElement: Element): void {
+			const context = canvasElement.getContext('2d');
+
+			this.drawContext(context);
 		}
 
 		public create(): void {

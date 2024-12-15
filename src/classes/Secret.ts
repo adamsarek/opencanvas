@@ -27,10 +27,10 @@ const Secret = (() => {
 			return wmGet(self, key);
 		}
 
-		public static set(self: object, key: string, value: unknown) {
+		public static set(self: object, key: string, value: unknown, proxy: boolean = true) {
 			const wm = wmInit(self);
 
-			if (value && typeof value === 'object') {
+			if (proxy && value && typeof value === 'object') {
 				wm[key] = new Proxy(value, {
 					get: (prop: object, propKey: keyof object) => {
 						return prop[propKey];
@@ -38,8 +38,16 @@ const Secret = (() => {
 					set: (prop: object, propKey: keyof object, propValue: unknown) => {
 						// If class has setter for specified key, use it
 						if (Object.getOwnPropertyDescriptor(Object.getPrototypeOf(self), key)?.set) {
+							let propClone;
+
+							try {
+								propClone = structuredClone(prop);
+							} catch(err) {
+								propClone = prop;
+							}
+
 							self[key as keyof object] = Object.assign(
-								structuredClone(prop),
+								propClone,
 								{ [propKey]: propValue }
 							);
 
@@ -48,7 +56,7 @@ const Secret = (() => {
 						}
 						return true;
 					}
-				})
+				});
 
 			} else {
 				wm[key] = value;

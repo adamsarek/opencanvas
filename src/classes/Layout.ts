@@ -3,17 +3,22 @@ import ILayout from './ILayout';
 
 const Layout = (() => {
 	class Layout implements ILayout {
-		public constructor() {}
+		public constructor(containerElement: Element | undefined, frameElement: Element | undefined, canvasElement: Element | undefined, overlayElement: Element | undefined) {
+			this.container = containerElement;
+			this.frame = frameElement;
+			this.canvas = canvasElement;
+			this.overlay = overlayElement;
+		}
 
 		public get container(): Element | undefined {
 			return Secret.get(this, 'container');
 		}
 		public set container(container: Element | undefined) {
 			if (container && container instanceof Element) {
-				Secret.set(this, 'container', container);
+				Secret.set(this, 'container', container, false);
 
 			} else {
-				Secret.set(this, 'container', undefined);
+				Secret.set(this, 'container', undefined, false);
 			}
 		}
 
@@ -22,10 +27,10 @@ const Layout = (() => {
 		}
 		public set frame(frame: Element | undefined) {
 			if (frame && frame instanceof Element) {
-				Secret.set(this, 'frame', frame);
+				Secret.set(this, 'frame', frame, false);
 
 			} else {
-				Secret.set(this, 'frame', undefined);
+				Secret.set(this, 'frame', undefined, false);
 			}
 		}
 
@@ -34,10 +39,10 @@ const Layout = (() => {
 		}
 		public set canvas(canvas: Element | undefined) {
 			if (canvas && canvas instanceof Element) {
-				Secret.set(this, 'canvas', canvas);
+				Secret.set(this, 'canvas', canvas, false);
 
 			} else {
-				Secret.set(this, 'canvas', undefined);
+				Secret.set(this, 'canvas', undefined, false);
 			}
 		}
 
@@ -46,10 +51,10 @@ const Layout = (() => {
 		}
 		public set overlay(overlay: Element | undefined) {
 			if (overlay && overlay instanceof Element) {
-				Secret.set(this, 'overlay', overlay);
+				Secret.set(this, 'overlay', overlay, false);
 
 			} else {
-				Secret.set(this, 'overlay', undefined);
+				Secret.set(this, 'overlay', undefined, false);
 			}
 		}
 

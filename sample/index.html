@@ -18,22 +18,29 @@
 				selector: null,
 				theme: null
 			});
+
+			window.openCanvas = openCanvas;
 		</script>
+
+		<!-- Sample only -->
+		<link href="./styles.css" rel="stylesheet">
+		<script src="./scripts.js"></script>
 	</head>
 	<body>
-		<noscript>JavaScript is required to use this site. <a href="https://www.enable-javascript.com/" target="_blank">Learn how to enable it here.</a></noscript>
-		<canvas class="opencanvas"></canvas>
-		<style>
-			body {
-				background: #333;
-				margin: 0;
-				display: grid;
-				grid-gap: 16px;
-				align-content: space-between;
-			}
-			canvas {
-				background: #030;
-			}
-		</style>
+		<div class="container">
+			<div class="main">
+				<noscript>JavaScript is required to use the OpenCanvas. <a href="https://www.enable-javascript.com/" target="_blank">Learn how to enable it here.</a></noscript>
+				<canvas class="opencanvas"></canvas>
+			</div>
+			<form class="options" oninput="onInput(this);">
+				<div class="options-item">
+					<label for="theme">Theme<output id="theme-output" class="output" for="theme" title="default">default</output></label>
+					<select id="theme" name="theme" value="default" oninput="openCanvas.options.theme = this.value;">
+						<option value="default">default</option>
+						<option value="light">light</option>
+					</select>
+				</div>
+			</form>
+		</div>
 	</body>
 </html>

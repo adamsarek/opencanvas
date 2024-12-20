@@ -8,7 +8,10 @@ import ILayout from './classes/ILayout';
 import Layout from './classes/Layout';
 
 const OpenCanvas = (() => {
-	const worker = new Worker(new URL('./classes/Worker.js', import.meta.url));
+	const workerURL = new URL('./classes/Worker.js', import.meta.url);
+	const workerBlob = new Blob([`import "${workerURL}"`], { type: 'text/javascript' });
+	const workerBlobURL = window.URL.createObjectURL(workerBlob);
+	const worker = new Worker(workerBlobURL, { type: 'module' });
 	const workerChannel = new WorkerChannel(worker);
 
 	class OpenCanvas {

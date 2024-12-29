@@ -1,5 +1,6 @@
-/* Themes */
-@import url(css/theme-default.css);
+/* Imports */
+@import url(css/icons.css);
+@import url(css/theme-dark.css);
 @import url(css/theme-light.css);
 
 /* Main */
@@ -7,11 +8,21 @@
 	font: 16px monospace;
 }
 
+.opencanvas-fullscreen {
+	font-size: 20px;
+}
+
+.opencanvas-fullscreen .opencanvas-button {
+	font-size: 16.6667px;
+}
+
+.opencanvas-fullscreen .opencanvas-icon {
+	font-size: 25px;
+}
+
 .opencanvas-container {
 	position: relative;
 	display: grid;
-	/*width: fit-content;
-	height: fit-content;*/
 	overflow: hidden;
 }
 
@@ -20,25 +31,155 @@
 }
 
 .opencanvas-canvas {
-	background: #000;
+	background: var(--canvas-background-color);
 	width: 100%;
 	height: 100%;
 	vertical-align: middle;
 }
 
 .opencanvas-overlay {
+	user-select: none;
 	position: absolute;
 	top: 0;
 	bottom: 0;
 	left: 0;
 	right: 0;
 	color: var(--overlay-color);
-	background: var(--overlay-background-color);
+	display: grid;
+	grid-template-rows: auto 1fr auto;
 }
-.opencanvas-overlay:after {
-	content: 'Loading...';
+
+.opencanvas-header,
+.opencanvas-body,
+.opencanvas-footer {
+	display: grid;
+}
+
+.opencanvas-header,
+.opencanvas-footer {
+	grid-template-columns: auto 1fr auto;
+}
+
+.opencanvas-header {
+	background: linear-gradient(0deg, var(--header-background-gradient-bottom-color) 0%, var(--header-background-gradient-top-color) 100%);
+	box-shadow: 0 0.0625em 0.125em var(--header-box-shadow-color);
+}
+
+.opencanvas-body {
+	position: relative;
+	display: grid;
+}
+
+.opencanvas-footer {
+	background: linear-gradient(0deg, var(--footer-background-gradient-bottom-color) 0%, var(--footer-background-gradient-top-color) 100%);
+	box-shadow: 0 -0.0625em 0.125em var(--footer-box-shadow-color);
+}
+
+.opencanvas-header > *,
+.opencanvas-footer > * {
+	display: grid;
+	grid-auto-flow: column;
+}
+
+.opencanvas-header > * > .opencanvas-button:first-of-type,
+.opencanvas-footer > * > .opencanvas-button:first-of-type {
+	padding-left: 0.5em;
+}
+
+.opencanvas-header > * > .opencanvas-button:last-of-type,
+.opencanvas-footer > * > .opencanvas-button:last-of-type {
+	padding-right: 0.5em;
+}
+
+.opencanvas-button,
+.opencanvas-label,
+.opencanvas-output {
+	display: flex;
+	align-items: center;
+}
+
+.opencanvas-button {
+	cursor: pointer;
+	color: inherit;
+	background: transparent;
+	border: 0;
+	padding: 0.5em 0.25em;
+	grid-gap: 1.5em;
+	opacity: 0.618;
+	transition: 0.25s opacity, 0.25s background-color;
+}
+.opencanvas-button:hover,
+.opencanvas-button.active {
+	opacity: 1;
+}
+
+.opencanvas-label {
+	grid-gap: 0.75em;
+}
+
+.opencanvas-popup {
+	pointer-events: none;
 	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
+	background: var(--popup-background-color);
+	border-radius: 0.3125em;
+	padding: 0.3125em 0;
+	box-shadow: 0 0.0625em 0.125em var(--popup-box-shadow-color);
+	grid-auto-flow: row;
+	overflow: hidden;
+	opacity: 0;
+	transition: 0.25s opacity;
+}
+.opencanvas-popup.visible {
+	pointer-events: initial;
+	opacity: 1;
+}
+
+.opencanvas-popup-content {
+	position: relative;
+}
+
+.opencanvas-popup-main-content,
+.opencanvas-popup-sub-content {
+	justify-items: stretch;
+	transition: 0.25s transform;
+}
+
+.opencanvas-popup-main-content {
+	height: 0;
+	transform: translateX(-100%);
+}
+.opencanvas-popup-main-content.visible {
+	height: 100%;
+	transform: translateX(0);
+}
+
+.opencanvas-popup-sub-content {
+	height: 0;
+	transform: translateX(100%);
+}
+.opencanvas-popup-sub-content.visible {
+	height: 100%;
+	transform: translateX(0);
+}
+
+.opencanvas-popup-sub-content .opencanvas-button:first-of-type {
+	border-bottom: 0.075em solid var(--popup-sub-content-first-button-border-color);
+	padding-bottom: 0.3em;
+}
+
+.opencanvas-popup .opencanvas-button {
+	padding: 0.375em 0.75em;
+	justify-content: space-between;
+	opacity: 1;
+}
+.opencanvas-popup .opencanvas-button:hover {
+	background: var(--popup-button-hover-background-color);
+}
+.opencanvas-popup .opencanvas-output-arrow {
+	margin-right: -0.3em;
+}
+
+.opencanvas-options-popup {
+	bottom: 0.3125em;
+	right: 0.3125em;
 }

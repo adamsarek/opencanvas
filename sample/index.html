@@ -34,9 +34,10 @@
 			</div>
 			<form class="options" oninput="onInput(this);">
 				<div class="options-item">
-					<label for="theme">Theme<output id="theme-output" class="output" for="theme" title="default">default</output></label>
-					<select id="theme" name="theme" value="default" oninput="openCanvas.options.theme = this.value;">
-						<option value="default">default</option>
+					<label for="theme">Theme<output id="theme-output" class="output" for="theme" title="auto">auto</output></label>
+					<select id="theme" name="theme" value="auto" oninput="openCanvas.options.theme = this.value;">
+						<option value="auto">auto</option>
+						<option value="dark">dark</option>
 						<option value="light">light</option>
 					</select>
 				</div>

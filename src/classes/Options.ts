@@ -31,7 +31,7 @@ const Options = (() => {
 				Secret.set(this, 'theme', theme);
 
 			} else {
-				Secret.set(this, 'theme', 'default');
+				Secret.set(this, 'theme', 'auto');
 			}
 		}
 

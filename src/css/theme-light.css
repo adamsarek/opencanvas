@@ -1,4 +1,15 @@
 .opencanvas.opencanvas-theme-light {
-	--overlay-color: #080808;
-	--overlay-background-color: #F8F8F8CC;
+	--box-shadow: #BBBE;
+	--canvas-background-color: #FFF;
+	--overlay-color: #000;
+	--header-background-gradient-top-color: #FFF8;
+	--header-background-gradient-bottom-color: #FFF3;
+	--header-box-shadow-color: #FFF5;
+	--footer-background-gradient-top-color: var(--header-background-gradient-bottom-color);
+	--footer-background-gradient-bottom-color: var(--header-background-gradient-top-color);
+	--footer-box-shadow-color: #FFF5;
+	--popup-background-color: #EEEE;
+	--popup-box-shadow-color: var(--box-shadow);
+	--popup-button-hover-background-color: #DDD;
+	--popup-sub-content-first-button-border-color: #CCC;
 }

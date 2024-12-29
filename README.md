@@ -191,8 +191,8 @@ const openCanvas = new OpenCanvas(options);
 		<tr>
 			<td valign="top"><code>theme</code></td>
 			<td valign="top"><code>string</code></td>
-			<td valign="top"><code>'default'</code> | <code>'light'</code></td>
-			<td valign="top"><code>'default'</code></td>
+			<td valign="top"><code>'auto'</code> | <code>'dark'</code> | <code>'light'</code></td>
+			<td valign="top"><code>'auto'</code></td>
 			<td valign="top">Choose a theme.</td>
 		</tr>
 	</tbody>
